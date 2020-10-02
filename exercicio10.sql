@@ -1,0 +1,6 @@
+CREATE SEQUENCE sequencia
+    INCREMENT 1
+    START 1
+    MINVALUE 0
+    MAXVALUE 1000;
+

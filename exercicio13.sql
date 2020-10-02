@@ -1,0 +1,3 @@
+CREATE SEQUENCE _100_em_diante
+    INCREMENT 1
+    START 100;

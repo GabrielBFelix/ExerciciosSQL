@@ -1,0 +1,2 @@
+ALTER SEQUENCE sequencia
+    MAXVALUE 200;

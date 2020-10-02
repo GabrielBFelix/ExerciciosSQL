@@ -1,0 +1,1 @@
+SELECT NEXTVAL('sequencia');
