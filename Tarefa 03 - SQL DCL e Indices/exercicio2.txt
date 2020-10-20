@@ -1,0 +1,7 @@
+2. Explique as diferentes opções de codificação de caracteres e de collations.
+
+Diferentes opções de codificação de caracteres vão dar um diferente "pacote" de caracteres para serem usados no banco de dados, exemplo:
+EUC_JP -> Caracteres japoneses
+EUC_KR -> Caracteres coreanos
+
+Enquanto as collations vão dizer as regras de comparação de tais caracteres (se considera letras maiúsculas diferentes de minusculas, se considera uma letra com acento diferente da mesma letra só que sem acento, etc).
