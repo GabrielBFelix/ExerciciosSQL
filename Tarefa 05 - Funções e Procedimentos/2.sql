@@ -1,13 +1,13 @@
 -- 2. Faça uma consulta para calcular a média de idade por departamento.
 
-CREATE OR REPLACE FUNCTION media_idade_por_dep(INTEGER) RETURNS TABLE (idade INTERVAL) LANGUAGE 'plpgsql' AS $$
+CREATE OR REPLACE FUNCTION media_idade_por_dep(codDep INTEGER) RETURNS INTEGER 
+	AS $$
+DECLARE
+	mediaIdadeDep INTEGER;
 BEGIN
-	RETURN QUERY(
-		SELECT AVG(AGE(f.datanasc)) AS idade
-		FROM funcionario f
-		WHERE f.depto = $1
-	);
+	SELECT into mediaIdadeDep AVG(EXTRACT(years FROM AGE(f.datanasc))) FROM funcionario f WHERE f.depto = codDep;
+	return mediaIdadeDep;
 END;
-$$;
+$$ LANGUAGE 'plpgsql';
 
 SELECT media_idade_por_dep(1);
